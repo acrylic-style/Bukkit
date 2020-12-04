@@ -101,6 +101,10 @@ public class CauldronLevelChangeEvent extends BlockEvent implements Cancellable 
          */
         ARMOR_WASH,
         /**
+         * Player cleaning their shulker box.
+         */
+        SHULKER_BOX_WASH,
+        /**
          * Entity being extinguished.
          */
         EXTINGUISH,
