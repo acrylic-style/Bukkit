@@ -109,6 +109,10 @@ public class CauldronLevelChangeEvent extends BlockEvent implements Cancellable 
          */
         EXTINGUISH,
         /**
+         * Cauldron's level is increasing due to a weather.
+         */
+        RAIN,
+        /**
          * Evaporating due to biome dryness.
          */
         EVAPORATE,
