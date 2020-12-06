@@ -888,6 +888,42 @@ public interface Player extends HumanEntity, Conversable, OfflinePlayer, PluginM
      * <p>
      * The player's client will download the new resource pack asynchronously
      * in the background, and will automatically switch to it once the
+     * download is complete. If the client has downloaded and cached the same
+     * resource pack in the past, it will perform a file size check against
+     * the response content to determine if the resource pack has changed and
+     * needs to be downloaded again. When this request is sent for the very
+     * first time from a given server, the client will first display a
+     * confirmation GUI to the player before proceeding with the download.
+     * <p>
+     * Notes:
+     * <ul>
+     * <li>Players can disable server resources on their client, in which
+     *     case this method will have no affect on them. Use the
+     *     {@link PlayerResourcePackStatusEvent} to figure out whether or not
+     *     the player loaded the pack!
+     * <li>There is no concept of resetting resource packs back to default
+     *     within Minecraft, so players will have to relog to do so or you
+     *     have to send an empty pack.
+     * <li>The request is send with "null" as the hash. This might result
+     *     in newer versions not loading the pack correctly.
+     * </ul>
+     *
+     * @param url The URL from which the client will download the resource
+     *     pack. The string must contain only US-ASCII characters and should
+     *     be encoded as per RFC 1738.
+     * @param force Whether if this resource pack is required. They will be
+     *     kicked if they didn't accept the resource pack.
+     * @throws IllegalArgumentException Thrown if the URL is null.
+     * @throws IllegalArgumentException Thrown if the URL is too long. The
+     *     length restriction is an implementation specific arbitrary value.
+     */
+    public void setResourcePack(@NotNull String url, boolean force);
+
+    /**
+     * Request that the player's client download and switch resource packs.
+     * <p>
+     * The player's client will download the new resource pack asynchronously
+     * in the background, and will automatically switch to it once the
      * download is complete. If the client has downloaded and cached a
      * resource pack with the same hash in the past it will not download but
      * directly apply the cached pack. When this request is sent for the very
@@ -919,6 +955,45 @@ public interface Player extends HumanEntity, Conversable, OfflinePlayer, PluginM
      *     long.
      */
     public void setResourcePack(@NotNull String url, @NotNull byte[] hash);
+
+    /**
+     * Request that the player's client download and switch resource packs.
+     * <p>
+     * The player's client will download the new resource pack asynchronously
+     * in the background, and will automatically switch to it once the
+     * download is complete. If the client has downloaded and cached a
+     * resource pack with the same hash in the past it will not download but
+     * directly apply the cached pack. When this request is sent for the very
+     * first time from a given server, the client will first display a
+     * confirmation GUI to the player before proceeding with the download.
+     * <p>
+     * Notes:
+     * <ul>
+     * <li>Players can disable server resources on their client, in which
+     *     case this method will have no affect on them. Use the
+     *     {@link PlayerResourcePackStatusEvent} to figure out whether or not
+     *     the player loaded the pack!
+     * <li>There is no concept of resetting resource packs back to default
+     *     within Minecraft, so players will have to relog to do so or you
+     *     have to send an empty pack.
+     * </ul>
+     *
+     * @param url The URL from which the client will download the resource
+     *     pack. The string must contain only US-ASCII characters and should
+     *     be encoded as per RFC 1738.
+     * @param hash The sha1 hash sum of the resource pack file which is used
+     *     to apply a cached version of the pack directly without downloading
+     *     if it is available. Hast to be 20 bytes long!
+     * @param force Whether if this resource pack is required. They will be
+     *     kicked if they didn't accept the resource pack.
+     * @throws IllegalArgumentException Thrown if the URL is null.
+     * @throws IllegalArgumentException Thrown if the URL is too long. The
+     *     length restriction is an implementation specific arbitrary value.
+     * @throws IllegalArgumentException Thrown if the hash is null.
+     * @throws IllegalArgumentException Thrown if the hash is not 20 bytes
+     *     long.
+     */
+    public void setResourcePack(@NotNull String url, @NotNull byte[] hash, boolean force);
 
     /**
      * Gets the Scoreboard displayed to this player

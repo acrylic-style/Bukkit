@@ -1,8 +1,10 @@
 
 package org.bukkit.inventory.meta;
 
+import org.bukkit.Location;
 import org.bukkit.block.BlockState;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 public interface BlockStateMeta extends ItemMeta {
 
@@ -25,6 +27,19 @@ public interface BlockStateMeta extends ItemMeta {
      */
     @NotNull
     BlockState getBlockState();
+
+    /**
+     * Returns the currently attached block state for this
+     * item or creates a new one if one doesn't exist.
+     *
+     * The state is a copy, it must be set back (or to another
+     * item) with {@link #setBlockState(org.bukkit.block.BlockState)}
+     *
+     * @param location the location
+     * @return the attached state or a new state
+     */
+    @NotNull
+    BlockState getBlockState(@Nullable Location location);
 
     /**
      * Attaches a copy of the passed block state to the item.
