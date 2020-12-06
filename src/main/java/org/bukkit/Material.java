@@ -1081,7 +1081,6 @@ public enum Material implements Keyed {
      */
     DARK_OAK_STAIRS(22921, Stairs.class),
     SLIME_BLOCK(31892),
-    GRASS_PATH(8604),
     /**
      * BlockData: {@link Bisected}
      */
@@ -2578,6 +2577,91 @@ public enum Material implements Keyed {
     POTTED_WARPED_FUNGUS(30800),
     POTTED_CRIMSON_ROOTS(13852),
     POTTED_WARPED_ROOTS(6403),
+    CALCITE(31001),
+    TUFF(31002),
+    COPPER_ORE(31003),
+    TINTED_GLASS(31004),
+    DIRT_PATH(31005),
+    COPPER_INGOT(31006),
+    BUNDLE(31007),
+    CANDLE(31008),
+    WHITE_CANDLE(31009),
+    ORANGE_CANDLE(31010),
+    MAGENTA_CANDLE(31011),
+    LIGHT_BLUE_CANDLE(31012),
+    YELLOW_CANDLE(31013),
+    LIME_CANDLE(31014),
+    PINK_CANDLE(31015),
+    GRAY_CANDLE(31016),
+    LIGHT_GRAY_CANDLE(31017),
+    CYAN_CANDLE(31018),
+    PURPLE_CANDLE(31019),
+    BLUE_CANDLE(31020),
+    BROWN_CANDLE(31021),
+    GREEN_CANDLE(31022),
+    BLACK_CANDLE(31024),
+    AMETHYST_SHARD(31025),
+    AMETHYST_BLOCK(31026),
+    BUDDING_AMETHYST(31027),
+    SMALL_AMETHYST_BUD(31028),
+    MEDIUM_AMETHYST_BUD(31029),
+    LARGE_AMETHYST_BUD(31030),
+    AMETHYST_CLUSTER(31031),
+    SPYGLASS(31032),
+    COPPER_BLOCK(31033),
+    LIGHTLY_WEATHERED_COPPER_BLOCK(31034),
+    SEMI_WEATHERED_COPPER_BLOCK(31035),
+    WEATHERED_COPPER_BLOCK(31036),
+    WEATHERED_CUT_COPPER(31081),
+    WEATHERED_CUT_COPPER_SLAB(31090),
+    WEATHERED_CUT_COPPER_STAIRS(31082),
+    SEMI_WEATHERED_CUT_COPPER_STAIRS(31083),
+    LIGHTLY_WEATHERED_CUT_COPPER_STAIRS(31084),
+    CUT_COPPER_STAIRS(31085),
+    SEMI_WEATHERED_CUT_COPPER_SLAB(31087),
+    LIGHTLY_WEATHERED_CUT_COPPER_SLAB(31088),
+    CUT_COPPER(31037),
+    SEMI_WEATHERED_CUT_COPPER(31079),
+    LIGHTLY_WEATHERED_CUT_COPPER(31038),
+    CUT_COPPER_SLAB(31039),
+    WAXED_COPPER(31040),
+    WAXED_SEMI_WEATHERED_COPPER(31041),
+    WAXED_LIGHTLY_WEATHERED_COPPER(31042),
+    WAXED_SEMI_WEATHERED_CUT_COPPER(31043),
+    WAXED_LIGHTLY_WEATHERED_CUT_COPPER(31044),
+    WAXED_CUT_COPPER(31045),
+    WAXED_SEMI_WEATHERED_CUT_COPPER_STAIRS(31046),
+    WAXED_LIGHTLY_WEATHERED_CUT_COPPER_STAIRS(31047),
+    WAXED_CUT_COPPER_STAIRS(31048),
+    WAXED_SEMI_WEATHERED_CUT_COPPER_SLAB(31049),
+    WAXED_LIGHTLY_WEATHERED_CUT_COPPER_SLAB(31050),
+    WAXED_CUT_COPPER_SLAB(31051),
+    LIGHTNING_ROD(31052),
+    POINTED_DRIPSTONE(31053),
+    CANDLE_CAKE(31055),
+    WHITE_CANDLE_CAKE(31056),
+    ORANGE_CANDLE_CAKE(31057),
+    MAGENTA_CANDLE_CAKE(31058),
+    LIGHT_BLUE_CANDLE_CAKE(31059),
+    YELLOW_CANDLE_CAKE(31060),
+    LIME_CANDLE_CAKE(31061),
+    PINK_CANDLE_CAKE(31062),
+    GRAY_CANDLE_CAKE(31063),
+    LIGHT_GRAY_CANDLE_CAKE(31064),
+    CYAN_CANDLE_CAKE(31065),
+    PURPLE_CANDLE_CAKE(31066),
+    BLUE_CANDLE_CAKE(31067),
+    BROWN_CANDLE_CAKE(31068),
+    GREEN_CANDLE_CAKE(31069),
+    BLACK_CANDLE_CAKE(31071),
+    WATER_CAULDRON(31072),
+    LAVA_CAULDRON(31073),
+    POWDER_SNOW_CAULDRON(31074),
+    POWDER_SNOW_BUCKET(31075),
+    RED_CANDLE(31076),
+    RED_CANDLE_CAKE(31077),
+    DRIPSTONE_BLOCK(31078),
+    POWDER_SNOW(31080),
     // ----- Legacy Separator -----
     @Deprecated
     LEGACY_AIR(0, 0),
@@ -3696,6 +3780,77 @@ public enum Material implements Keyed {
     public boolean isBlock() {
         switch (this) {
             //<editor-fold defaultstate="collapsed" desc="isBlock">
+            case DRIPSTONE_BLOCK:
+            case SEMI_WEATHERED_CUT_COPPER:
+            case WEATHERED_CUT_COPPER:
+            case CUT_COPPER_STAIRS:
+            case LIGHTLY_WEATHERED_CUT_COPPER_SLAB:
+            case LIGHTLY_WEATHERED_CUT_COPPER_STAIRS:
+            case SEMI_WEATHERED_CUT_COPPER_SLAB:
+            case SEMI_WEATHERED_CUT_COPPER_STAIRS:
+            case WEATHERED_CUT_COPPER_STAIRS:
+            case RED_CANDLE:
+            case RED_CANDLE_CAKE:
+            case COPPER_BLOCK:
+            case COPPER_INGOT:
+            case COPPER_ORE:
+            case CUT_COPPER:
+            case LIGHTLY_WEATHERED_CUT_COPPER:
+            case WAXED_COPPER:
+            case WAXED_CUT_COPPER:
+            case WAXED_LIGHTLY_WEATHERED_COPPER:
+            case WAXED_LIGHTLY_WEATHERED_CUT_COPPER:
+            case WAXED_SEMI_WEATHERED_COPPER:
+            case WAXED_SEMI_WEATHERED_CUT_COPPER:
+            case CUT_COPPER_SLAB:
+            case LIGHTLY_WEATHERED_COPPER_BLOCK:
+            case WAXED_CUT_COPPER_SLAB:
+            case WAXED_CUT_COPPER_STAIRS:
+            case WAXED_LIGHTLY_WEATHERED_CUT_COPPER_SLAB:
+            case WAXED_LIGHTLY_WEATHERED_CUT_COPPER_STAIRS:
+            case WAXED_SEMI_WEATHERED_CUT_COPPER_SLAB:
+            case SEMI_WEATHERED_COPPER_BLOCK:
+            case WEATHERED_COPPER_BLOCK:
+            case WAXED_SEMI_WEATHERED_CUT_COPPER_STAIRS:
+            case LIGHTNING_ROD:
+            case POINTED_DRIPSTONE:
+            case CANDLE:
+            case BLACK_CANDLE:
+            case BLUE_CANDLE:
+            case BROWN_CANDLE:
+            case CYAN_CANDLE:
+            case GRAY_CANDLE:
+            case GREEN_CANDLE:
+            case LIGHT_BLUE_CANDLE:
+            case LIGHT_GRAY_CANDLE:
+            case LIME_CANDLE:
+            case MAGENTA_CANDLE:
+            case ORANGE_CANDLE:
+            case PINK_CANDLE:
+            case PURPLE_CANDLE:
+            case WHITE_CANDLE:
+            case YELLOW_CANDLE:
+            case CANDLE_CAKE:
+            case BLACK_CANDLE_CAKE:
+            case BLUE_CANDLE_CAKE:
+            case BROWN_CANDLE_CAKE:
+            case CYAN_CANDLE_CAKE:
+            case GRAY_CANDLE_CAKE:
+            case GREEN_CANDLE_CAKE:
+            case LIGHT_BLUE_CANDLE_CAKE:
+            case LIGHT_GRAY_CANDLE_CAKE:
+            case LIME_CANDLE_CAKE:
+            case MAGENTA_CANDLE_CAKE:
+            case ORANGE_CANDLE_CAKE:
+            case PINK_CANDLE_CAKE:
+            case PURPLE_CANDLE_CAKE:
+            case WHITE_CANDLE_CAKE:
+            case YELLOW_CANDLE_CAKE:
+            case LAVA_CAULDRON:
+            case POWDER_SNOW_CAULDRON:
+            case WATER_CAULDRON:
+            case POWDER_SNOW:
+            case WEATHERED_CUT_COPPER_SLAB:
             case ACACIA_BUTTON:
             case ACACIA_DOOR:
             case ACACIA_FENCE:
@@ -3976,7 +4131,7 @@ public enum Material implements Keyed {
             case GRANITE_WALL:
             case GRASS:
             case GRASS_BLOCK:
-            case GRASS_PATH:
+            case DIRT_PATH:
             case GRAVEL:
             case GRAY_BANNER:
             case GRAY_BED:
@@ -4904,7 +5059,7 @@ public enum Material implements Keyed {
             case GRANITE_STAIRS:
             case GRANITE_WALL:
             case GRASS_BLOCK:
-            case GRASS_PATH:
+            case DIRT_PATH:
             case GRAVEL:
             case GRAY_BANNER:
             case GRAY_BED:
@@ -5265,6 +5420,27 @@ public enum Material implements Keyed {
             case YELLOW_TERRACOTTA:
             case YELLOW_WALL_BANNER:
             case YELLOW_WOOL:
+            case COPPER_BLOCK:
+            case COPPER_INGOT:
+            case COPPER_ORE:
+            case CUT_COPPER:
+            case LIGHTLY_WEATHERED_CUT_COPPER:
+            case WAXED_COPPER:
+            case WAXED_CUT_COPPER:
+            case WAXED_LIGHTLY_WEATHERED_COPPER:
+            case WAXED_LIGHTLY_WEATHERED_CUT_COPPER:
+            case WAXED_SEMI_WEATHERED_COPPER:
+            case WAXED_SEMI_WEATHERED_CUT_COPPER:
+            case CUT_COPPER_SLAB:
+            case LIGHTLY_WEATHERED_COPPER_BLOCK:
+            case WAXED_CUT_COPPER_SLAB:
+            case WAXED_CUT_COPPER_STAIRS:
+            case WAXED_LIGHTLY_WEATHERED_CUT_COPPER_SLAB:
+            case WAXED_LIGHTLY_WEATHERED_CUT_COPPER_STAIRS:
+            case WAXED_SEMI_WEATHERED_CUT_COPPER_SLAB:
+            case SEMI_WEATHERED_COPPER_BLOCK:
+            case WEATHERED_COPPER_BLOCK:
+            case WAXED_SEMI_WEATHERED_CUT_COPPER_STAIRS:
             // ----- Legacy Separator -----
             case LEGACY_STONE:
             case LEGACY_GRASS:
@@ -5506,6 +5682,7 @@ public enum Material implements Keyed {
         }
         switch (this) {
             //<editor-fold defaultstate="collapsed" desc="isTransparent">
+            case TINTED_GLASS:
             case ACACIA_BUTTON:
             case ACACIA_SAPLING:
             case ACTIVATOR_RAIL:
@@ -6860,6 +7037,80 @@ public enum Material implements Keyed {
     public boolean isItem() {
         switch (this) {
             //<editor-fold defaultstate="collapsed" desc="isItem">
+            case WEATHERED_CUT_COPPER_SLAB:
+            case DRIPSTONE_BLOCK:
+            case SPYGLASS:
+            case BUNDLE:
+            case POWDER_SNOW_BUCKET:
+            case SEMI_WEATHERED_CUT_COPPER:
+            case WEATHERED_CUT_COPPER:
+            case CUT_COPPER_STAIRS:
+            case LIGHTLY_WEATHERED_CUT_COPPER_SLAB:
+            case LIGHTLY_WEATHERED_CUT_COPPER_STAIRS:
+            case SEMI_WEATHERED_CUT_COPPER_SLAB:
+            case SEMI_WEATHERED_CUT_COPPER_STAIRS:
+            case WEATHERED_CUT_COPPER_STAIRS:
+            case RED_CANDLE:
+            case RED_CANDLE_CAKE:
+            case COPPER_BLOCK:
+            case COPPER_INGOT:
+            case COPPER_ORE:
+            case CUT_COPPER:
+            case LIGHTLY_WEATHERED_CUT_COPPER:
+            case WAXED_COPPER:
+            case WAXED_CUT_COPPER:
+            case WAXED_LIGHTLY_WEATHERED_COPPER:
+            case WAXED_LIGHTLY_WEATHERED_CUT_COPPER:
+            case WAXED_SEMI_WEATHERED_COPPER:
+            case WAXED_SEMI_WEATHERED_CUT_COPPER:
+            case CUT_COPPER_SLAB:
+            case LIGHTLY_WEATHERED_COPPER_BLOCK:
+            case WAXED_CUT_COPPER_SLAB:
+            case WAXED_CUT_COPPER_STAIRS:
+            case WAXED_LIGHTLY_WEATHERED_CUT_COPPER_SLAB:
+            case WAXED_LIGHTLY_WEATHERED_CUT_COPPER_STAIRS:
+            case WAXED_SEMI_WEATHERED_CUT_COPPER_SLAB:
+            case SEMI_WEATHERED_COPPER_BLOCK:
+            case WEATHERED_COPPER_BLOCK:
+            case WAXED_SEMI_WEATHERED_CUT_COPPER_STAIRS:
+            case LIGHTNING_ROD:
+            case POINTED_DRIPSTONE:
+            case CANDLE:
+            case BLACK_CANDLE:
+            case BLUE_CANDLE:
+            case BROWN_CANDLE:
+            case CYAN_CANDLE:
+            case GRAY_CANDLE:
+            case GREEN_CANDLE:
+            case LIGHT_BLUE_CANDLE:
+            case LIGHT_GRAY_CANDLE:
+            case LIME_CANDLE:
+            case MAGENTA_CANDLE:
+            case ORANGE_CANDLE:
+            case PINK_CANDLE:
+            case PURPLE_CANDLE:
+            case WHITE_CANDLE:
+            case YELLOW_CANDLE:
+            case CANDLE_CAKE:
+            case BLACK_CANDLE_CAKE:
+            case BLUE_CANDLE_CAKE:
+            case BROWN_CANDLE_CAKE:
+            case CYAN_CANDLE_CAKE:
+            case GRAY_CANDLE_CAKE:
+            case GREEN_CANDLE_CAKE:
+            case LIGHT_BLUE_CANDLE_CAKE:
+            case LIGHT_GRAY_CANDLE_CAKE:
+            case LIME_CANDLE_CAKE:
+            case MAGENTA_CANDLE_CAKE:
+            case ORANGE_CANDLE_CAKE:
+            case PINK_CANDLE_CAKE:
+            case PURPLE_CANDLE_CAKE:
+            case WHITE_CANDLE_CAKE:
+            case YELLOW_CANDLE_CAKE:
+            case LAVA_CAULDRON:
+            case POWDER_SNOW_CAULDRON:
+            case WATER_CAULDRON:
+            case POWDER_SNOW:
             case ACACIA_WALL_SIGN:
             case ATTACHED_MELON_STEM:
             case ATTACHED_PUMPKIN_STEM:
@@ -7040,6 +7291,38 @@ public enum Material implements Keyed {
     public boolean isInteractable() {
         switch (this) {
             // <editor-fold defaultstate="collapsed" desc="isInteractable">
+            case CANDLE:
+            case BLACK_CANDLE:
+            case CANDLE_CAKE:
+            case BLUE_CANDLE:
+            case BROWN_CANDLE:
+            case CYAN_CANDLE:
+            case GRAY_CANDLE:
+            case GREEN_CANDLE:
+            case LIGHT_BLUE_CANDLE:
+            case LIGHT_GRAY_CANDLE:
+            case LIME_CANDLE:
+            case MAGENTA_CANDLE:
+            case ORANGE_CANDLE:
+            case PINK_CANDLE:
+            case PURPLE_CANDLE:
+            case WHITE_CANDLE:
+            case YELLOW_CANDLE:
+            case BLACK_CANDLE_CAKE:
+            case BLUE_CANDLE_CAKE:
+            case BROWN_CANDLE_CAKE:
+            case CYAN_CANDLE_CAKE:
+            case GRAY_CANDLE_CAKE:
+            case GREEN_CANDLE_CAKE:
+            case LIGHT_BLUE_CANDLE_CAKE:
+            case LIGHT_GRAY_CANDLE_CAKE:
+            case LIME_CANDLE_CAKE:
+            case MAGENTA_CANDLE_CAKE:
+            case ORANGE_CANDLE_CAKE:
+            case PINK_CANDLE_CAKE:
+            case PURPLE_CANDLE_CAKE:
+            case WHITE_CANDLE_CAKE:
+            case YELLOW_CANDLE_CAKE:
             case ACACIA_BUTTON:
             case ACACIA_DOOR:
             case ACACIA_FENCE:
@@ -7447,7 +7730,7 @@ public enum Material implements Keyed {
             case SPONGE:
             case WET_SPONGE:
                 return 0.6F;
-            case GRASS_PATH:
+            case DIRT_PATH:
                 return 0.65F;
             case ACTIVATOR_RAIL:
             case DETECTOR_RAIL:
@@ -8096,7 +8379,7 @@ public enum Material implements Keyed {
             case SPONGE:
             case WET_SPONGE:
                 return 0.6F;
-            case GRASS_PATH:
+            case DIRT_PATH:
                 return 0.65F;
             case ACTIVATOR_RAIL:
             case DETECTOR_RAIL:
@@ -8609,6 +8892,7 @@ public enum Material implements Keyed {
             case WATER_BUCKET:
             case LAVA_BUCKET:
             case MILK_BUCKET:
+            case POWDER_SNOW_BUCKET:
                 return BUCKET;
             case DRAGON_BREATH:
             case HONEY_BOTTLE:
