@@ -2662,6 +2662,9 @@ public enum Material implements Keyed {
     RED_CANDLE_CAKE(31077),
     DRIPSTONE_BLOCK(31078),
     POWDER_SNOW(31080),
+    SCULK_SENSOR(31091),
+    AXOLOTL_BUCKET(31092),
+    AXOLOTL_SPAWN_EGG(31093),
     // ----- Legacy Separator -----
     @Deprecated
     LEGACY_AIR(0, 0),
