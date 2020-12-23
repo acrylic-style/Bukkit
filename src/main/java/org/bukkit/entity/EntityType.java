@@ -277,7 +277,7 @@ public enum EntityType implements Keyed {
      */
     LIGHTNING("lightning_bolt", LightningStrike.class, -1, false),
     PLAYER("player", Player.class, -1, false),
-    AXOLOTL("player", Axolotl.class, -1),
+    AXOLOTL("axolotl", Axolotl.class, -1),
     /**
      * An unknown entity without an Entity Class
      */
